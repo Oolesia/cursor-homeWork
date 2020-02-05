@@ -3,7 +3,7 @@
          alert("Це не число");
          N = prompt('Введіть ціле число');
      }
-     return N;
+     return parseInt(N, 10);
  }
  let startNum = prompt('Введіть перше число', '1');
  startNum = checkNumber(startNum);
