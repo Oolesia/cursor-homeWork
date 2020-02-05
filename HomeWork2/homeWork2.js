@@ -11,7 +11,7 @@
  let endNum = prompt('Введіть друге число', '10');
  endNum = checkNumber(endNum);
 
- let missEvenNum = confirm("Парні пропускаємо?");
+ const missEvenNum = confirm("Парні пропускаємо?");
  if (missEvenNum == true) {
      document.writeln("Парні числа пропускаємо ")
  } else {
