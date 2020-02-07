@@ -1,5 +1,5 @@
  function checkNumber(N) {
-     while (+N != N || isNaN(parseInt(N, 10))) {
+     while (isNaN(Number(N))) {
          alert("Це не число");
          N = prompt('Введіть ціле число');
      }
@@ -11,23 +11,24 @@
  let endNum = prompt('Введіть друге число', '10');
  endNum = checkNumber(endNum);
 
- const missEvenNum = confirm("Парні пропускаємо?");
- if (missEvenNum == true) {
-     document.writeln("Парні числа пропускаємо ")
+ if (startNum > endNum) {
+     document.write(`Перше число ${startNum} більше за друге число ${endNum}. \n
+    Cуму не шукаємо!!!`);
  } else {
-     document.writeln("Парні числа не пропускаємо ");
- }
-
- let sum = 0;
- if (missEvenNum == false) {
-     for (let i = +startNum; i <= +endNum; i++) {
-         sum = sum + i
-     }
- } else {
-     for (let i = +startNum; i <= +endNum; i++) {
-         if (i % 2 != 0) {
+     const missEvenNum = confirm("Парні пропускаємо?");
+     let sum = 0;
+     if (!missEvenNum) {
+         document.writeln("Парні числа не пропускаємо ");
+         for (let i = +startNum; i <= +endNum; i++) {
              sum = sum + i
          }
+     } else {
+         document.writeln("Парні числа пропускаємо ")
+         for (let i = +startNum; i <= +endNum; i++) {
+             if (i % 2 != 0) {
+                 sum = sum + i
+             }
+         }
      }
+     document.write(`Перше число ${startNum}, Друге число ${endNum}. \n Cума ${sum}`);
  }
- document.write(`Перше число ${startNum}, Друге число ${endNum}. \n Cума ${sum}`);

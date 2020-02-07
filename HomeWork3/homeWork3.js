@@ -52,11 +52,24 @@ function getRandomNumber(N, M){
     return randomNumber;
 }
 
+const letter = 'f';
+const word = 'faFlabFablfa';
+function countLetter(letter, word){
+  let count = 0;
+  for(let i=0; i<word.length; i++){
+    if(word[i].toLowerCase() == letter.toLowerCase()){
+      count = count + 1;
+    }
+  }
+    return count;
+}
+
 document.write(`Функція 1| вхідні дані - ${maxNumber}, результат = ${getMaxDigit(maxNumber)} \n
 Функція 2| вхідні дані - ${powNum}, ${exp}, результат = ${pow(powNum, exp)} \n
 Функція 3| вхідні дані - ${Name}, результат = ${formatName(Name)} \n
 Функція 4| вхідні дані - ${fullSalary}, результат = ${getSalaryWithoutTax(fullSalary)} \n
 Функція 5| вхідні дані - ${minNam}, ${maxNam}, результат = ${getRandomNumber(minNam, maxNam)} \n
+Функція 6| вхідні дані - ${letter}, ${word}, результат = ${countLetter(letter, word)} \n
 `);
 
 
