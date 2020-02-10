@@ -74,7 +74,7 @@ const deleteLetters = (letter, word) => {
     return newWord;
 }
 
-const sumBeforeConvert = '260uah';
+const sumBeforeConvert = '200$';
 const convertCurrency = (sumBeforeConvert) => {
     let sumAfterConvert = '';
     let i;
