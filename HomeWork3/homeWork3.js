@@ -1,5 +1,6 @@
-const maxNumber = '1543712';
+const maxNumber = 1543712;
 const getMaxDigit = (a) => {
+    a = String(a);
     let resultMaxNum = a[0];
     for (let i = 0; i < a.length; i++) {
         if (resultMaxNum < a[i]) {
@@ -11,27 +12,27 @@ const getMaxDigit = (a) => {
 
 const powNum = 4;
 const exp = 4;
-const pow = (Num, exp) => {
-    let resultPow = Num;
+const pow = (num, exp) => {
+    let resultPow = num;
     if (exp === 0) {
         resultPow = 1;
     } else {
         for (let i = 1; i < exp; i++) {
-            resultPow *= Num;
+            resultPow *= num;
         }
     }
     return resultPow;
 }
 
-const Name = "oLEsiA";
-const formatName = (Name) => {
+const name = "oLEsiA";
+const formatName = (name) => {
     let formatedName = "";
     let newLetter = "";
-    for (let i = 0; i < Name.length; i++) {
+    for (let i = 0; i < name.length; i++) {
         if (i === 0) {
-            newLetter = Name[0].toUpperCase();
+            newLetter = name[0].toUpperCase();
         } else {
-            newLetter = Name[i].toLowerCase();
+            newLetter = name[i].toLowerCase();
         }
         formatedName += newLetter;
     }
@@ -41,15 +42,13 @@ const formatName = (Name) => {
 const fullSalary = 10000;
 const getSalaryWithoutTax = (fullSalary) => {
     const taxPercent = 19.5;
-    let salaryWithoutTax = fullSalary - fullSalary * taxPercent / 100;
-    return salaryWithoutTax;
+    return fullSalary - fullSalary * taxPercent / 100;
 }
 
 const minNam = 5;
 const maxNam = 10;
-const getRandomNumber = (N, M) => {
-    let randomNumber = Math.round(N + Math.random() * (M - N));
-    return randomNumber;
+const getRandomNumber = (n, m) => {
+    return Math.round(n + Math.random() * (m - n));
 }
 
 const letter = 'f';
@@ -115,10 +114,10 @@ const isPalyndrom = (word) => {
     word = newWord.toLowerCase();
     for (let i = 0; i < word.length / 2; i++) {
         if (word[i] != word[word.length - i - 1]) {
-            return "не паліндром";
+            return false;
         }
     }
-    return "паліндром";
+    return true;
 }
 
 const phrase = 'Бисквит был очень нежный';
@@ -135,7 +134,7 @@ const deleteDuplicateLetter = (word) => {
 
 document.write(`Функція 1| вхідні дані - ${maxNumber} | результат = ${getMaxDigit(maxNumber)} \n
 Функція 2| вхідні дані - ${powNum}, ${exp} | результат = ${pow(powNum, exp)} \n
-Функція 3| вхідні дані - ${Name} | результат = ${formatName(Name)} \n
+Функція 3| вхідні дані - ${name} | результат = ${formatName(name)} \n
 Функція 4| вхідні дані - ${fullSalary} | результат = ${getSalaryWithoutTax(fullSalary)} \n
 Функція 5| вхідні дані - ${minNam}, ${maxNam} | результат = ${getRandomNumber(minNam, maxNam)} \n
 Функція 6| вхідні дані - ${letter}, ${word} | результат = ${countLetter(letter, word)} \n
