@@ -7,24 +7,24 @@ const getPairs = (students) => {
 }
 
 const getPairsWithThemes = (pairs, themes) => {
-    let pairsWithThemes = [];
+    let studentAndThemes = [];
     for (let i = 0; i < pairs.length; i++) {
-        pairsWithThemes.push([pairs[i].join(' и '), themes[i]]);
+        studentAndThemes.push([pairs[i].join(' и '), themes[i]]);
     }
-    return pairsWithThemes;
+    return studentAndThemes;
 }
-const getMarksToStudent = (students, marks) => {
+const getMarksToStudent = (studentArr, marksArr) => {
     let studentsMarks = [];
-    for (let i = 0; i < students.length; i++) {
-        studentsMarks.push([students[i], marks[i]]);
+    for (let i = 0; i < studentArr.length; i++) {
+        studentsMarks.push([studentArr[i], marksArr[i]]);
     }
     return studentsMarks;
 }
-const getRandonMarks = (pairsWithThemes) => {
+const getRandonMarks = (pairsArr) => {
     const RandonMarks = Math.floor(Math.random() * 5) + 1;
     const studentsMarks = [];
-    for (let i = 0; i < pairsWithThemes.length; i++) {
-        studentsMarks.push([...pairsWithThemes[i], RandonMarks]);
+    for (let i = 0; i < pairsArr.length; i++) {
+        studentsMarks.push([...pairsArr[i], RandonMarks]);
     }
     return studentsMarks;
 }
