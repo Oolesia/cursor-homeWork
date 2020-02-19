@@ -86,13 +86,12 @@ console.log(getBestStudent(students));
 const calculateWordLetters = (word) => {
     let objLetters = {};
     for (let i = 0; i < word.length; i++) {
-        if (word[i] in objLetters) {
-            objLetters[word[i]] += 1;
+        if (word[i].toLowerCase() in objLetters) {
+            objLetters[word[i].toLowerCase()] += 1;
         } else {
-            objLetters[word[i]] = 1;
+            objLetters[word[i].toLowerCase()] = 1;
         }
     }
     return objLetters;
-
 }
 console.log(calculateWordLetters("тест"));
