@@ -44,10 +44,10 @@ const getSubjects = (student) => {
 console.log(getSubjects(students[0]));
 
 const getAverageMark = (student) => {
-    const deneralSum = Object.values(student.subjects).reduce((sum, elArr) => {
+    const deneralSum = Object.values(student.subjects).reduce((sum, markArr) => {
         let sumArr = 0;
-        for (let element of elArr) {
-            sumArr += element;
+        for (let mark of markArr) {
+            sumArr += mark;
         }
         return sum += sumArr;
     }, 0);
@@ -93,5 +93,6 @@ const calculateWordLetters = (word) => {
         }
     }
     return objLetters;
+
 }
-console.log(calculateWordLetters("тест"));
+console.log(calculateWordLetters("Етес"));
