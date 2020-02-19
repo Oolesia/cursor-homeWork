@@ -28,7 +28,7 @@ const getSubjects = (student) => {
     return Object.keys(student.subjects).map((el) => {
         const re = /_/;
         let str = '';
-        for (i = 0; i < el.length; i++) {
+        for (let i = 0; i < el.length; i++) {
             if (i == 0) {
                 str += el[i].toUpperCase();
             } else {
@@ -46,7 +46,7 @@ console.log(getSubjects(students[0]));
 const getAverageMark = (student) => {
     const deneralSum = Object.values(student.subjects).reduce((sum, elArr) => {
         let sumArr = 0;
-        for (const element of elArr) {
+        for (let element of elArr) {
             sumArr += element;
         }
         return sum += sumArr;
