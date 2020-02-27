@@ -33,16 +33,12 @@ console.log(`В країні litva всього налогів платять - 
 function getMySalary() {
     const min = 1500;
     const max = 2000;
-    const salary = Math.floor(Math.random() * (max - min)) + min;
-    const taxes = getMyTaxes.call(this, salary);
-    const profit = salary - taxes;
-    return {
-        salary,
-        taxes,
-        profit
-    };
+    let timerId = setInterval(() => {
+        let salary = Math.floor(Math.random() * (max - min)) + min;
+        const taxes = getMyTaxes.call(this, salary);
+        const profit = salary - taxes;
+        console.log({salary, taxes, profit});
+    }, 10000);
+    setTimeout(() => clearInterval(timerId), 60000);
 }
-
-
-let timerId = setInterval(() => console.log(getMySalary.call(country)), 10000);
-setTimeout(() => clearInterval(timerId), 60000);
+getMySalary.call(country);
