@@ -1,0 +1,19 @@
+#main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#blocks {
+    margin: 0;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block {
+    height: 50px;
+    width: 50px;
+}
