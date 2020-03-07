@@ -6,7 +6,7 @@ const generateBlocks = () => {
     const arrayColorR = window.crypto.getRandomValues(new Uint8Array(numberBlocks));
     const arrayColorG = window.crypto.getRandomValues(new Uint8Array(numberBlocks));
     const arrayColorB = window.crypto.getRandomValues(new Uint8Array(numberBlocks));
-    for (i = 0; i < numberBlocks; i++) {
+    for (let i = 0; i < numberBlocks; i++) {
         const block = document.createElement('div');
         conteiner.prepend(block);
         block.className = ('block');
