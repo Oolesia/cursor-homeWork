@@ -1,0 +1,25 @@
+#main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#blocks {
+    margin: 0;
+    display: flex;
+
+}
+
+.letters {
+    margin: 10px;
+    height: 150px;
+    width: 120px;
+    background-color: lightslategrey;
+}
+
+.letters p {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
