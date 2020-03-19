@@ -1,0 +1,35 @@
+body{
+    background-color: lightgrey;
+}
+#main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.person{
+    height: 20%;
+    width: 20%;
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(71, 71, 71);
+    color: lightgrey;
+}
+#container{
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+}
+.navigation{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navigation button{
+margin: 5px;
+width: 70px;
+}
+
