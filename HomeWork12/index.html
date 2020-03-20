@@ -10,10 +10,19 @@
 <body>
     <div id="main-content">
         <h3>HW11/_Olesia Sikora_/</h3>
-        <button id="get-persons">Отримати інформацію про персонажів films/2/</button>
+        <label for="">
+            введіть номер фільмy:
+            <input type="text" id="film">
+        </label>
+        <button id="get-persons">Отримати інdформацію (по замовчуванню 2)</button>
         <button id="get-planets">Отримати назви планет</button>
+
     </div>
     <div id="container"></div>
+    <div id="pagination">
+        <button id="prev-btn" class="hidden-btn">Prev</button>
+        <button id="next-btn" class="hidden-btn">Next</button>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
 </body>

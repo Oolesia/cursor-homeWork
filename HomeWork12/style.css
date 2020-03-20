@@ -1,6 +1,7 @@
-body{
+body {
     background-color: lightgrey;
 }
+
 #main-content {
     display: flex;
     flex-direction: column;
@@ -8,28 +9,55 @@ body{
     justify-content: center;
 }
 
-.person{
-    height: 20%;
+.person {
+    height: 450px;
+}
+
+.element {
     width: 20%;
+    text-align: center;
     margin: 5px;
-    padding: 5px;
     background-color: rgb(71, 71, 71);
     color: lightgrey;
 }
-#container{
+
+.planet {
+    height: 100%;
+}
+
+#container {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
-.navigation{
+
+#pagination {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.navigation button{
-margin: 5px;
-width: 70px;
+
+#pagination button {
+    margin: 5px;
+    width: 70px;
 }
 
+.visible-btn {
+    visibility: visible;
+}
+
+.hidden-btn {
+    visibility: hidden;
+}
+
+.character-img {
+    height: 60%;
+    overflow: hidden;
+}
+
+.person img {
+    width: 100%;
+    background-size: 100% auto
+}
