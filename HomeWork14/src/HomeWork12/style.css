@@ -1,0 +1,71 @@
+body {
+    background-color: lightgrey;
+}
+
+#main-content #HWbuttons,  #function-block, h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-content #HWbuttons button{
+    margin: 10px;
+    height: 50px;
+    width: 100px;
+}
+#main-content #InstagramIcon{
+    width: 50%;
+}
+
+.person {
+    height: 450px;
+}
+
+.element {
+    width: 20%;
+    text-align: center;
+    margin: 5px;
+    background-color: rgb(71, 71, 71);
+    color: lightgrey;
+}
+
+.planet {
+    height: 100%;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#pagination {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pagination button {
+    margin: 5px;
+    width: 70px;
+}
+
+.visible-btn {
+    visibility: visible;
+}
+
+.hidden-btn {
+    visibility: hidden;
+}
+
+.character-img {
+    height: 60%;
+    overflow: hidden;
+}
+
+.person img {
+    width: 100%;
+    background-size: 100% auto
+}
