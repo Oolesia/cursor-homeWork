@@ -4,24 +4,24 @@ const fontSizeDown = document.getElementById('font-down');
 const content = document.getElementById('main-content');
 
 function* createIdGenerator() {
-    let i = 1;
+    let i = 0;
     while (true) {
-        console.log(i++);
-        yield;
+        i++;
+        yield i;
     }
 }
 
 
 const idGenerator = createIdGenerator();
-idGenerator.next();
-idGenerator.next();
-idGenerator.next();
+console.log(idGenerator.next());
+console.log(idGenerator.next());
+console.log(idGenerator.next());
+
+
 
 fontSize.addEventListener('click', function () {
-    let size = document.getElementById('font-size').value;
-    if (size == '') {
-        size = 14;
-    }
+    let size = document.getElementById('font-size').value || 14;
+
     const fontGenerator = newFontGenerator(+size);
     console.log(fontGenerator.next().value);
     fontGenerator.next();
